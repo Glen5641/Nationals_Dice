@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nationals Dice</title>
+  <link rel="stylesheet" href="index.css">
+  <title>
+  </title>
+</head>
+<body>
+  <h1 class="title" id="title">Nationals Stunt Calculator</h1>
+  <h1 class="label" id="stuntlabel">Beware the Calculator!!!</h1>
+  <button id="single" class="singlebtn">Single Stunt</button>
+  <button id="third" class="thirdbtn">third</button>
+
+
+  <script>
+    var single = document.getElementById("single");
+    var third = document.getElementById("third");
+
+    single.onclick = function() {
+
+      var stunts = ["Full-Up", "Tumble", "Backhandspring Full-Up", "Rollup Fronthandspring", "1st Pyramid", "Cheer", "Hand 2 Hand", "Baskets", "Last Pyramid"];
+      var type = Math.floor(Math.random() * 9);
+      var times = Math.ceil(Math.random() * 4);
+      document.getElementById('stuntlabel').innerHTML = "Do a " + stunts[type] + " " + times.toString() + " times!";
+    }
+
+    third.onclick = function() {
+      var stunts = ["First Third", "Second Third", "Last Third"];
+      var type = Math.floor(Math.random() * 3);
+      document.getElementById('stuntlabel').innerHTML = "Do the " + stunts[type] + "!";
+    }
+  </script>
+</body>
+</html>
